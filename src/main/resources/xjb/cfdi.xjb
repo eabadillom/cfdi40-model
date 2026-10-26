@@ -1,0 +1,42 @@
+<jaxb:bindings version="2.1" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <jaxb:bindings schemaLocation="../xsd/cfdv40.xsd" node="/xs:schema">
+    <jaxb:schemaBindings><jaxb:package name="mx.gob.sat.cfdi.v40"/></jaxb:schemaBindings>
+  </jaxb:bindings>
+
+  <jaxb:bindings schemaLocation="../xsd/catCFDI.xsd" node="/xs:schema">
+   <jaxb:schemaBindings>
+    <jaxb:package name="mx.gob.sat.cfdi.catalogos"/>
+  </jaxb:schemaBindings>
+
+  <jaxb:bindings node="xs:simpleType[@name='c_CodigoPostal']">
+    <jaxb:typesafeEnumClass map="false"/>
+    </jaxb:bindings>
+    <jaxb:bindings node="xs:simpleType[@name='c_ClaveProdServ']">
+      <jaxb:typesafeEnumClass map="false"/>
+    </jaxb:bindings>
+    <jaxb:bindings node="xs:simpleType[@name='c_ClaveUnidad']">
+      <jaxb:typesafeEnumClass map="false"/>
+    </jaxb:bindings>
+    <jaxb:bindings node="xs:simpleType[@name='c_Colonia']">
+      <jaxb:typesafeEnumClass map="false"/>
+    </jaxb:bindings>
+    <jaxb:bindings node="xs:simpleType[@name='c_Municipio']">
+      <jaxb:typesafeEnumClass map="false"/>
+    </jaxb:bindings>
+  </jaxb:bindings>
+
+  <jaxb:bindings schemaLocation="../xsd/tdCFDI.xsd" node="/xs:schema">
+    <jaxb:schemaBindings><jaxb:package name="mx.gob.sat.cfdi.tipos"/></jaxb:schemaBindings>
+  </jaxb:bindings>
+
+  <jaxb:bindings schemaLocation="../xsd/Pagos20.xsd" node="/xs:schema">
+    <jaxb:schemaBindings><jaxb:package name="mx.gob.sat.cfdi.pagos20"/></jaxb:schemaBindings>
+  </jaxb:bindings>
+
+  <jaxb:bindings schemaLocation="../xsd/nomina12.xsd" node="/xs:schema">
+    <jaxb:schemaBindings><jaxb:package name="mx.gob.sat.cfdi.nomina12"/></jaxb:schemaBindings>
+  </jaxb:bindings>
+
+  <!-- Agrega un bloque igual por cada complemento adicional
+       (CartaPorte31.xsd, ComercioExterior20.xsd, etc.) -->
+</jaxb:bindings>
