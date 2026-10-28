@@ -86,7 +86,7 @@ jobs:
 
       - name: Verify generated classes
         run: |
-          for c in Comprobante Pagos Nomina; do
+          for c in Comprobante Pagos Nomina TimbreFiscalDigital; do
             if ! find target/generated-sources/jaxb -name "$c.java" | grep -q .; then
               echo "ERROR: no se generó $c.java"
               exit 1
