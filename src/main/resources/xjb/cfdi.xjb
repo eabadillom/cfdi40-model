@@ -37,6 +37,12 @@
     <jaxb:schemaBindings><jaxb:package name="mx.gob.sat.cfdi.nomina12"/></jaxb:schemaBindings>
   </jaxb:bindings>
 
+  <jaxb:bindings schemaLocation="../xsd/TimbreFiscalDigitalv11.xsd" node="/xs:schema">
+    <jaxb:schemaBindings>
+      <jaxb:package name="mx.gob.sat.cfdi.tfd11"/>
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+
   <!-- Agrega un bloque igual por cada complemento adicional
        (CartaPorte31.xsd, ComercioExterior20.xsd, etc.) -->
 </jaxb:bindings>

@@ -13,6 +13,7 @@ Se incluyen únicamente los siguientes esquemas:
 | Tipos de datos del SAT | `tdCFDI.xsd` | `mx.gob.sat.cfdi.tipos` |
 | Complemento de Pagos 2.0 | `Pagos20.xsd` | `mx.gob.sat.cfdi.pagos20` |
 | Complemento de Nómina 1.2 | `nomina12.xsd` | `mx.gob.sat.cfdi.nomina12` |
+| TimbreFiscalDigital 1.1 | `TimbreFiscalDigitalv11.xsd` | `mx.gob.sat.cfdi.tfd11` |
 
 > No se incluyen otros complementos (Carta Porte, Comercio Exterior, Retenciones, etc.). Para agregarlos, ver la sección [Agregar un complemento](#agregar-un-complemento).
 
@@ -32,7 +33,9 @@ cfdi40-model/
     │   ├── catCFDI.xsd
     │   ├── tdCFDI.xsd
     │   ├── Pagos20.xsd
-    │   └── nomina12.xsd
+    │   ├── nomina12.xsd
+    │   └── TimbreFiscalDigitalv11.xsd
+
     └── xjb/
         └── cfdi.xjb
 ```
@@ -97,7 +100,9 @@ Ejemplo de lectura de un CFDI con complementos:
 JAXBContext ctx = JAXBContext.newInstance(
     mx.gob.sat.cfdi.v40.Comprobante.class,
     mx.gob.sat.cfdi.pagos20.Pagos.class,
-    mx.gob.sat.cfdi.nomina12.Nomina.class);
+    mx.gob.sat.cfdi.nomina12.Nomina.class,
+    mx.gob.sat.cfdi.tfd11.TimbreFiscalDigital.class
+    );
 
 Unmarshaller unmarshaller = ctx.createUnmarshaller();
 Comprobante comprobante = (Comprobante) unmarshaller.unmarshal(new File("factura.xml"));

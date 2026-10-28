@@ -16,15 +16,17 @@ Este proyecto sigue versionado semántico (SemVer) y el formato de [Keep a Chang
   - Tipos de datos del SAT (`tdCFDI.xsd`).
   - Complemento de Pagos 2.0 (`Pagos20.xsd`).
   - Complemento de Nómina 1.2 (`nomina12.xsd`).
+  - Timbre Fiscal Digital 1.1 (`TimbreFiscalDigitalv11.xsd`).
 - Archivo de bindings `cfdi.xjb` que asigna un paquete Java por esquema:
   - `mx.gob.sat.cfdi.v40`
   - `mx.gob.sat.cfdi.catalogos`
   - `mx.gob.sat.cfdi.tipos`
   - `mx.gob.sat.cfdi.pagos20`
   - `mx.gob.sat.cfdi.nomina12`
+  - `mx.gob.sat.cfdi.tfd11`
 - Mapeo a `String` de los catálogos demasiado grandes para ser `enum` (`c_CodigoPostal`, `c_ClaveProdServ`, `c_ClaveUnidad`, `c_Colonia`, `c_Municipio`), lo que elimina los avisos de `EnumMemberSizeCap` durante la generación.
 - `import` de los XSD apuntando a archivos locales, de modo que la generación no requiere acceso a internet.
 - `distributionManagement` para publicar en GitHub Packages.
-- Flujo de integración continua en GitHub Actions (`.github/workflows/deploy-snapshot.yml`) que valida la versión SNAPSHOT, genera las fuentes, verifica las clases generadas (`Comprobante`, `Pagos`, `Nomina`), compila y publica en GitHub Packages desde la rama `develop`.
-- Flujo de integración continua en GitHub Actions (`.github/workflows/deploy-release.yml`) que valida la versión RELEASE, genera las fuentes, verifica las clases generadas (`Comprobante`, `Pagos`, `Nomina`), compila y publica en GitHub Packages desde la rama `master`.
+- Flujo de integración continua en GitHub Actions (`.github/workflows/deploy-snapshot.yml`) que valida la versión SNAPSHOT, genera las fuentes, verifica las clases generadas (`Comprobante`, `Pagos`, `Nomina`, `TimbreFiscalDigital`), compila y publica en GitHub Packages desde la rama `develop`.
+- Flujo de integración continua en GitHub Actions (`.github/workflows/deploy-release.yml`) que valida la versión RELEASE, genera las fuentes, verifica las clases generadas (`Comprobante`, `Pagos`, `Nomina`, `TimbreFiscalDigital`), compila y publica en GitHub Packages desde la rama `master`.
 - Documentación en `README.md`: generación de fuentes, compilación, instalación local, uso desde otros proyectos, cómo agregar complementos y solución de problemas.
