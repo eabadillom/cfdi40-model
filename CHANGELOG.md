@@ -4,7 +4,7 @@ Todos los cambios importantes en este proyecto serán documentados en este archi
 
 Este proyecto sigue versionado semántico (SemVer) y el formato de [Keep a Changelog](https://keepachangelog.com/es-ES/1.0.0/).
 
-## [1.0.0] - 2026-10-26
+## [1.0.0] - 2026-10-28
 
 ### Added
 
