@@ -13,6 +13,7 @@ Se incluyen únicamente los siguientes esquemas:
 | Tipos de datos del SAT | `tdCFDI.xsd` | `mx.gob.sat.cfdi.tipos` |
 | Complemento de Pagos 2.0 | `Pagos20.xsd` | `mx.gob.sat.cfdi.pagos20` |
 | Complemento de Nómina 1.2 | `nomina12.xsd` | `mx.gob.sat.cfdi.nomina12` |
+| Impuestos Locales | `implocal.xsd` | `mx.gob.sat.cfdi.implocal` |
 | TimbreFiscalDigital 1.1 | `TimbreFiscalDigitalv11.xsd` | `mx.gob.sat.cfdi.tfd11` |
 
 > No se incluyen otros complementos (Carta Porte, Comercio Exterior, Retenciones, etc.). Para agregarlos, ver la sección [Agregar un complemento](#agregar-un-complemento).
@@ -29,13 +30,16 @@ cfdi40-model/
 ├── pom.xml
 └── src/main/resources/
     ├── xsd/
-    │   ├── cfdv40.xsd
     │   ├── catCFDI.xsd
-    │   ├── tdCFDI.xsd
-    │   ├── Pagos20.xsd
+    │   ├── catNomina.xsd
+    │   ├── catPagos.xsd
+    │   ├── cfdv40.xsd
+    │   ├── implocal.xsd
     │   ├── nomina12.xsd
+    │   ├── Pagos20.xsd
+    │   ├── tdCFDI.xsd
     │   └── TimbreFiscalDigitalv11.xsd
-
+    │
     └── xjb/
         └── cfdi.xjb
 ```
@@ -58,7 +62,7 @@ target/generated-sources/jaxb/mx/gob/sat/cfdi/...
 Para verificar el resultado:
 
 ```bash
-find target/generated-sources/jaxb -name "Comprobante.java" -o -name "Pagos.java" -o -name "Nomina.java"
+find target/generated-sources/jaxb -name "Comprobante.java" -o -name "Pagos.java" -o -name "Nomina.java" -o -name "ImpuestosLocales.java"
 ```
 
 **Notas:**
