@@ -6,7 +6,7 @@
 
   <groupId>com.ferbo.sat</groupId>
   <artifactId>cfdi40-model</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
+  <version>1.0.0-RELEASE</version>
   <name>cfdi40-model</name>
   <description>Modelo de objetos (JAXB) generado a partir de los XSD del CFDI 4.0 del SAT</description>
 
